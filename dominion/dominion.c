@@ -1349,7 +1349,7 @@ int smithyEffect(struct gameState *state, int handPos){
   int currentPlayer = whoseTurn(state);
   //code from switch statement
   //+3 Cards
-  for (i = 0; i < 3; i++)
+  for (int i = 0; i < 3; i++)
   {
     drawCard(currentPlayer, state);
   }

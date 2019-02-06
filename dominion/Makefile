@@ -36,6 +36,11 @@ player: player.c interface.o
 unittest1: unittest1.c dominion.o rngs.o
 	gcc -o unittest1 -g  unittest1.c dominion.o rngs.o $(CFLAGS)
 
+unittestresults: unittest1
+	./unitest1 &> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+	cat dominion.c.gcov >> unittestresults.out
+	 
 all: playdom player unittest1
 
 clean:

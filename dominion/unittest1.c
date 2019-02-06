@@ -18,7 +18,7 @@ int main(){
   char report2[10];
   char report3[10];
   struct gameState myState;
-  myState->whoseTurn = 0;
+  myState.whoseTurn = 0;
 
   //call whoseTurn on new gameState
   result = whoseTurn(&myState);
@@ -29,7 +29,7 @@ int main(){
   }
 
   //increment whose turn
-  myState->whoseTurn++;
+  myState.whoseTurn++;
   result2 = whoseTurn(&myState);
   if (result2==1){
     strcpy(report2, "PASSED");
@@ -38,7 +38,7 @@ int main(){
   }
 
   //reset whose turn to zero
-  myState->whoseTurn = 0;
+  myState.whoseTurn = 0;
   result3 = whoseTurn(&myState);
   if (result3==0){
     strcpy(report3, "PASSED");

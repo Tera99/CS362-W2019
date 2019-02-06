@@ -40,8 +40,8 @@ unittestresults: unittest1
 	./unittest1 &> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
-	 
-all: playdom player unittest1
+
+all: playdom player unittestresults
 
 clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe

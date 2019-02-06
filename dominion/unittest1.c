@@ -23,27 +23,27 @@ int main(){
   //call whoseTurn on new gameState
   result = whoseTurn(&myState);
   if (result==0){
-    report = "PASSED";
+    strcpy(report, "PASSED");
   } else {
-    report = "FAILED";
+    strcpy(report, "FAILED");
   }
 
   //increment whose turn
   myState->whoseTurn++;
   result2 = whoseTurn(&myState);
   if (result2==1){
-    report2 = "PASSED";
+    strcpy(report2, "PASSED");
   } else {
-    report2 = "FAILED";
+    strcpy(report2, "FAILED");
   }
 
   //reset whose turn to zero
   myState->whoseTurn = 0;
   result3 = whoseTurn(&myState);
   if (result3==0){
-    report3 = "PASSED";
+    strcpy(report3, "PASSED");
   } else {
-    report3 = "FAILED";
+    strcpy(report3, "FAILED");
   }
 
   //provide user with unambiguos results

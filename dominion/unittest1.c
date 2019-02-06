@@ -21,7 +21,7 @@ int main(){
 
   printf("result of whoseTurn: %d", result);
 
-  printf("~~~~~End testing whoseTurn function~~~~~\n")
+  printf("~~~~~End testing whoseTurn function~~~~~\n");
   printf("End Unit Test 1\n");
   return 0;
 }

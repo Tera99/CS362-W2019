@@ -11,7 +11,7 @@ Unit tests for dominion.c
 #include "rngs.h"
 int main(){
   printf("Begining Unit Test 1\n");
-  printf("~~~~~Testing whoseTurn function~~~~~\n")
+  printf("~~~~~Testing whoseTurn function~~~~~\n");
   //set up the variables and call the function
   //create a gameState and call whoseTurn on it
   int result;

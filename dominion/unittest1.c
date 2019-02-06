@@ -5,7 +5,7 @@ Unit tests for dominion.c
 **************************************/
 #include "dominion.h"
 #include "dominion_helpers.h"
-#include <string>
+#include <string.h>
 #include <stdio.h>
 #include <assert.h>
 #include "rngs.h"
@@ -14,7 +14,9 @@ int main(){
   printf("~~~~~Testing whoseTurn function~~~~~\n");
   //initialize variables
   int result, result2, result3;
-  string report, report2, report3;
+  char report[10];
+  char report2[10];
+  char report3[10];
   struct gameState myState;
   myState->whoseTurn = 0;
 

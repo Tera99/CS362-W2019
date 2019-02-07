@@ -18,7 +18,7 @@ int main(){
   myState.supplyCount[myCard] = 0;
   int result;
   //call supplyCount function
-  result = supplyCount(myCard, myState);
+  result = supplyCount(myCard, &myState);
   printf("The test result is: %d\n", result);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");

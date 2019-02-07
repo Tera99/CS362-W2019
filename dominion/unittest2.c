@@ -13,8 +13,13 @@ int main(){
   printf("Begining Unit Test 2\n");
   printf("~~~~~Testing supplyCount function~~~~~\n");
   //initialize variables
-
+  int myCard = 0;
+  struct gameState myState;
+  myState.supplyCount[myCard] = 0;
+  int result;
   //call supplyCount function
+  result = supplyCount(myCard, myState);
+  printf("The test result is: %d", result);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");
   printf("End Unit Test 2\n");

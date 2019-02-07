@@ -18,12 +18,13 @@ int main(){
   printf("~~~~~Testing adventurerEffect function~~~~~\n");
 
   //initialize a blank game state
+  int result;
   struct gameState myState;
   //clear the struct with memset
   memset(&myState, 0, sizeof(myState));
 
   //call adventurerEffect, should return zero
-  int result = adventurerEffect(&myState);
+  result = adventurerEffect(&myState);
   printf("Test result: %d\n", result);
 
 

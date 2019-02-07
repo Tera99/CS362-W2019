@@ -3,6 +3,15 @@ Terezie (Tera) Schaller
 Assignment 3
 Unit tests for dominion.c
 **************************************/
+/************************************
+function tested: whoseTurn
+3 tests
+test 1 : sets he turn to 0
+test 2 : increments game state turn
+test 3 : returns turn state to zero
+REFERENCES
+https://stackoverflow.com/questions/44012865/error-invalid-type-argument-of-have-struct-xmplrpc-binding
+*************************************/
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>

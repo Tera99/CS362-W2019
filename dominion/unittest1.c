@@ -28,7 +28,9 @@ int main(){
   char report2[10];
   char report3[10];
   struct gameState myState;
-  myState.whoseTurn = 0;
+  //clear the struct with memset
+  memset(&myState, 0, sizeof(myState));
+  //myState.whoseTurn = 0;
 
   //call whoseTurn on new gameState
   result = whoseTurn(&myState);
@@ -57,9 +59,9 @@ int main(){
   }
 
   //provide user with unambiguos results
-  printf("Test 1: %s\n", report);
-  printf("Test 2: %s\n", report2);
-  printf("Test 3: %s\n", report3);
+  printf("Test 1 - empty game: %s\n", report);
+  printf("Test 2 - increment turn: %s\n", report2);
+  printf("Test 3 - reset turn: %s\n", report3);
 
 
   printf("~~~~~End testing whoseTurn function~~~~~\n");

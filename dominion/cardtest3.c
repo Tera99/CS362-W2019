@@ -39,7 +39,7 @@ int main(){
   result = villageEffect(&myState, myHandPos);
   printf("Test result: %d\n", result);
 
-  printf("~~~~~End testing villageEffect function~~~~~\n")
+  printf("~~~~~End testing villageEffect function~~~~~\n");
   printf("~~~~~End Card Test 3~~~~~\n");
   return 0;
 }

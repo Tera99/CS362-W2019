@@ -3,6 +3,10 @@ Terezie (Tera) Schaller
 Assignment 3
 Unit tests for dominion.c
 **************************************/
+/*************************************
+unittest2.c
+testing supplyCount function
+**************************************/
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>

@@ -4,9 +4,10 @@ Assignment 3
 Unit tests for dominion.c
 **************************************/
 /************************************
+unittest1.c
 function tested: whoseTurn
 3 tests
-test 1 : sets he turn to 0
+test 1 : sets the turn to 0
 test 2 : increments game state turn
 test 3 : returns turn state to zero
 REFERENCES

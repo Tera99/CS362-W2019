@@ -10,9 +10,9 @@ Unit tests for dominion.c
 #include <assert.h>
 #include "rngs.h"
 int main(){
-  printf("Begining Card Test 1\n");
+  printf("~~~~~Begining Card Test 1~~~~~\n");
 
 
-  printf("End Unit Test 1\n");
+  printf("~~~~~End Unit Test 1~~~~~\n");
   return 0;
 }

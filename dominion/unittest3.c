@@ -13,7 +13,7 @@ testing scoreFor function
 #include "rngs.h"
 
 int main(){
-  printf("Begining Unit Test 3\n");
+  printf("~~~~~Begining Unit Test 3~~~~~\n");
   printf("~~~~~ Testing scoreFor function ~~~~~\n");
   //initialize needed variables
   int myPlayer = 0;
@@ -26,6 +26,6 @@ int main(){
   printf("Test result: %d\n", result);
 
   printf("~~~~~ End testing scoreFor function ~~~~~\n");
-  printf("End Unit Test 3\n");
+  printf("~~~~~End Unit Test 3~~~~~\n");
   return 0;
 }

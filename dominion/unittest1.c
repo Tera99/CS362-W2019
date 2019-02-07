@@ -20,7 +20,7 @@ https://stackoverflow.com/questions/44012865/error-invalid-type-argument-of-have
 #include <assert.h>
 #include "rngs.h"
 int main(){
-  printf("Begining Unit Test 1\n");
+  printf("~~~~~Begining Unit Test 1~~~~~\n");
   printf("~~~~~Testing whoseTurn function~~~~~\n");
   //initialize variables
   int result, result2, result3;
@@ -63,6 +63,6 @@ int main(){
 
 
   printf("~~~~~End testing whoseTurn function~~~~~\n");
-  printf("End Unit Test 1\n");
+  printf("~~~~~End Unit Test 1~~~~~\n");
   return 0;
 }

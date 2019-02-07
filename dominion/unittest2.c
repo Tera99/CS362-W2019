@@ -14,7 +14,7 @@ testing supplyCount function
 #include <assert.h>
 #include "rngs.h"
 int main(){
-  printf("Begining Unit Test 2\n");
+  printf("~~~~~Begining Unit Test 2~~~~~\n");
   printf("~~~~~Testing supplyCount function~~~~~\n");
   //initialize variables
   int myCard = 0;
@@ -26,6 +26,6 @@ int main(){
   printf("The test result is: %d\n", result);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");
-  printf("End Unit Test 2\n");
+  printf("~~~~~End Unit Test 2~~~~~\n");
   return 0;
 }

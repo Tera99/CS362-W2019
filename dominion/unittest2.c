@@ -19,7 +19,7 @@ int main(){
   int result;
   //call supplyCount function
   result = supplyCount(myCard, myState);
-  printf("The test result is: %d", result);
+  printf("The test result is: %d\n", result);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");
   printf("End Unit Test 2\n");

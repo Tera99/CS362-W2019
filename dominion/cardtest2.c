@@ -35,7 +35,7 @@ int main(){
   // initialize a game state and player cards
   initializeGame(numPlayers, k, seed, &myState);
 
-  //call adventurerEffect, should return zero
+  //call smithyEffect, should return zero
   result = smithyEffect(&myState, myHandPos);
   printf("Test result: %d\n", result);
 

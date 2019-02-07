@@ -5,6 +5,10 @@ Unit tests for dominion.c
 unittest3.c
 testing scoreFor function
 **************************************/
+/*************************************
+unittest3.c
+testing scoreFor function
+**************************************/
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>

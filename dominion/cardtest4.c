@@ -12,7 +12,6 @@ Unit tests for dominion.c
 int main(){
   printf("~~~~~Begining Card Test 4~~~~~\n");
 
-
   printf("~~~~~End Card Test 4~~~~~\n");
   return 0;
 }

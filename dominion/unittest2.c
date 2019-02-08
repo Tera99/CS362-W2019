@@ -30,7 +30,7 @@ int main(){
 
   //test 2 - add some cards to the deck
   myState.supplyCount[myCard1] = 25;
-  mySate.supplyCount[myCard2] = 100;
+  myState.supplyCount[myCard2] = 100;
 
   result1 = supplyCount(myCard1, &myState);
   result2 = supplyCount(myCard2, &myState);

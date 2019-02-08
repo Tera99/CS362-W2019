@@ -122,10 +122,10 @@ int main(){
   myState.handCount[myPlayer] = 11;
   int i;
   for (i = 0; i < 10; i++){
-    myState.hand[myPlayer][i] = curse;
+    myState.hand[myPlayer][i] = copper;
   }
   //myState.handCount[myPlayer] = 1;
-  //myState.hand[myPlayer][10] = gardens;
+  myState.hand[myPlayer][10] = gardens;
   //print result
   int result6 = scoreFor(myPlayer, &myState);
   printf("Test 6 - gardens, expected: 1 - result: %d :", result6);

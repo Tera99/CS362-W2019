@@ -69,7 +69,7 @@ int main(){
   //check the last type of card
 
   //print test reports
-  printf("Test 1 - empty supply: %s\n", report);
+  printf("Test 1 - empty supply: %s\n", report1);
   printf("Test 2 - add cards: %s\n", report2);
   printf("Test 3 - large number of cards: %s\n", report3);
 

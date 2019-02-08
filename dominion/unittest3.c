@@ -29,6 +29,11 @@ int main(){
   int result = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result);
 
+  //test hand, discard, deck
+  myState.hand[myPlayer][0] = province;
+  result = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result);
+
   printf("~~~~~ End testing scoreFor function ~~~~~\n");
   printf("~~~~~End Unit Test 3~~~~~\n");
   return 0;

@@ -118,11 +118,11 @@ int main(){
   //test gardens
   //reset state
   memset(&myState, 0, sizeof(myState));
-  //10 cards
+  //10 cards + gardens
   myState.handCount[myPlayer] = 11;
   int i;
   for (i = 0; i < 10; i++){
-    myState.hand[myPlayer][i] = copper;
+    myState.hand[myPlayer][i] = curse;
   }
   //myState.handCount[myPlayer] = 1;
   myState.hand[myPlayer][10] = gardens;
@@ -134,6 +134,9 @@ int main(){
   } else {
     printf("FAILED\n");
   }
+
+  
+
 
 
   //15 cards

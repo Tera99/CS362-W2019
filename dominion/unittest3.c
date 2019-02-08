@@ -109,7 +109,7 @@ int main(){
   //print result
   int result5 = scoreFor(myPlayer, &myState);
   printf("Test 5 - hand + discard + deck, expected: 30 - result: %d :", result5);
-  if (result4 == 30){
+  if (result5 == 30){
     printf("PASSED\n");
   } else {
     printf("FAILED\n");

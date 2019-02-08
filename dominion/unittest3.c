@@ -119,13 +119,13 @@ int main(){
   //reset state
   memset(&myState, 0, sizeof(myState));
   //10 cards
-  myState.deckCount[myPlayer] = 10;
+  myState.handCount[myPlayer] = 11;
   int i;
   for (i = 0; i < 10; i++){
-    myState.deck[myPlayer][i] = copper;
+    myState.hand[myPlayer][i] = copper;
   }
-  myState.handCount[myPlayer] = 1;
-  myState.hand[myPlayer][0] = gardens;
+  //myState.handCount[myPlayer] = 1;
+  myState.hand[myPlayer][10] = gardens;
   //print result
   int result6 = scoreFor(myPlayer, &myState);
   printf("Test 6 - gardens, expected: 1 - result: %d :", result6);

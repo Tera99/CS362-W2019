@@ -35,7 +35,31 @@ int main(){
   myState.hand[myPlayer][2] = province;
   myState.hand[myPlayer][3] = great_hall;
   myState.hand[myPlayer][4] = curse;
-  myState.handCount[0] = 5;
+  myState.handCount[myPlayer] = 5;
+  result = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result);
+
+  //clear game state
+  memset(&myState, 0, sizeof(myState))
+  //test discard
+  myState.discard[myPlayer][0] = estate;
+  myState.discard[myPlayer][1] = duchy;
+  myState.discard[myPlayer][2] = province;
+  myState.discard[myPlayer][3] = great_hall;
+  myState.discard[myPlayer][4] = curse;
+  myState.discardCount[myPlayer] = 5;
+  result = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result);
+
+  //clear game state
+  memset(&myState, 0, sizeof(myState))
+  //test deck
+  myState.deck[myPlayer][0] = estate;
+  myState.deck[myPlayer][1] = duchy;
+  myState.deck[myPlayer][2] = province;
+  myState.deck[myPlayer][3] = great_hall;
+  myState.deck[myPlayer][4] = curse;
+  myState.deckCount[myPlayer] = 5;
   result = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result);
 

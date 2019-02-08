@@ -36,8 +36,8 @@ int main(){
   myState.hand[myPlayer][3] = great_hall;
   myState.hand[myPlayer][4] = curse;
   myState.handCount[myPlayer] = 5;
-  result = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result);
+  int result2 = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result2);
 
   //clear game state
   memset(&myState, 0, sizeof(myState));
@@ -48,8 +48,8 @@ int main(){
   myState.discard[myPlayer][3] = great_hall;
   myState.discard[myPlayer][4] = curse;
   myState.discardCount[myPlayer] = 5;
-  result = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result);
+  int result3 = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result3);
 
   //clear game state
   memset(&myState, 0, sizeof(myState));
@@ -60,8 +60,8 @@ int main(){
   myState.deck[myPlayer][3] = great_hall;
   myState.deck[myPlayer][4] = curse;
   myState.deckCount[myPlayer] = 5;
-  result = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result);
+  int result4 = scoreFor(myPlayer, &myState);
+  printf("Test result: %d\n", result4);
 
   printf("~~~~~ End testing scoreFor function ~~~~~\n");
   printf("~~~~~End Unit Test 3~~~~~\n");

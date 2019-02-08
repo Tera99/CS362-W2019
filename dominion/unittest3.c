@@ -27,8 +27,11 @@ int main(){
 
   //try calling scoreFor
   int result = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result);
-
+  if (result == 0){
+    printf("Test 1 - empty deck: PASSED");
+  } else {
+    printf("Test 1 - empty deck: FAILED");
+  }
   //test hand
   myState.hand[myPlayer][0] = estate;
   myState.hand[myPlayer][1] = duchy;
@@ -37,7 +40,12 @@ int main(){
   myState.hand[myPlayer][4] = curse;
   myState.handCount[myPlayer] = 5;
   int result2 = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result2);
+  printf("Test 2 - hand, expected: 10 result: %d :", result2);
+  if (result2 == 10){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //clear game state
   memset(&myState, 0, sizeof(myState));

@@ -74,7 +74,6 @@ int main(){
   myState.deck[myPlayer][4] = curse;
   myState.deckCount[myPlayer] = 5;
   int result4 = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result4);
   printf("Test 4 - deck, expected: 10 - result: %d :", result4);
   if (result4 == 10){
     printf("PASSED\n");

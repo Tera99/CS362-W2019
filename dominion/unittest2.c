@@ -13,6 +13,7 @@ testing supplyCount function
 #include <stdio.h>
 #include <assert.h>
 #include "rngs.h"
+
 int main(){
   printf("~~~~~Begining Unit Test 2~~~~~\n");
   printf("~~~~~Testing supplyCount function~~~~~\n");
@@ -20,13 +21,17 @@ int main(){
   int myCard = 0;
   int myCard1 = 1;
   int myCard2 = 2;
+  int myCard3 = 3;
   struct gameState myState;
   myState.supplyCount[myCard] = 0;
-  //report2 results of tests
-  int result, result1, result2;
+  //report results of tests
+  int result, result1, result2, result3, result4;
   char report1[10];
   char report2[10];
   char report3[10];
+  char report4[10];
+  char report5[10];
+
   //call supplyCount function
   result = supplyCount(myCard, &myState);
   if (result==0){
@@ -35,7 +40,8 @@ int main(){
     strcpy (report1, "FAILED");
   }
 
-  //test 2 - add some cards to the deck
+  //test 2 - add some cards to the deck, including larger numbers than would be
+  //needed in a normal game
   myState.supplyCount[myCard1] = 25;
   myState.supplyCount[myCard2] = 100;
   result1 = supplyCount(myCard1, &myState);
@@ -46,32 +52,34 @@ int main(){
     strcpy (report2, "FAILED");
   }
 
-  if (result2==100){
+  if (result2 == 100){
     strcpy (report3, "PASSED");
   } else {
     strcpy (report3, "FAILED");
   }
 
-
-
-/*
-  printf("Test 0 result is: %d\n", result);
-  printf("Test 1 result: %d\n", result1);
-  printf("Test 2 result: %d\n", result2);
-*/
-
   //subtract cards from the deck
+  myState.supplyCount[myCard1]--;
+  result3 = supplyCount(myCard1, &myState);
+  if (result3 == 24){
+    strcpy (report4, "PASSED");
+  } else {
+    strcpy (report4, "FAILED");
+  }
 
   //negative number of cards??
-
-  //extremely large number of a card
-
-  //check the last type of card
+  myState.supplyCount[myCard]--;
+  if (result4 == -1){
+    strcpy (report5, "PASSED");
+  } else {
+    strcpy (report5, "FAILED");
+  }
 
   //print test reports
   printf("Test 1 - empty supply: %s\n", report1);
   printf("Test 2 - add cards: %s\n", report2);
   printf("Test 3 - large number of cards: %s\n", report3);
+  printf("Test 4 - subtract cards: %s\n", report4);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");
   printf("~~~~~End Unit Test 2~~~~~\n");

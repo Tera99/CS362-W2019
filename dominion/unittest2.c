@@ -24,7 +24,9 @@ int main(){
   myState.supplyCount[myCard] = 0;
   //report2 results of tests
   int result, result1, result2;
-  char[10] report1, report2, report3;
+  char report1[10];
+  char report2[10];
+  char report3[10];
   //call supplyCount function
   result = supplyCount(myCard, &myState);
   if (result==0){

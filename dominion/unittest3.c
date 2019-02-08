@@ -40,7 +40,7 @@ int main(){
   printf("Test result: %d\n", result);
 
   //clear game state
-  memset(&myState, 0, sizeof(myState))
+  memset(&myState, 0, sizeof(myState));
   //test discard
   myState.discard[myPlayer][0] = estate;
   myState.discard[myPlayer][1] = duchy;
@@ -52,7 +52,7 @@ int main(){
   printf("Test result: %d\n", result);
 
   //clear game state
-  memset(&myState, 0, sizeof(myState))
+  memset(&myState, 0, sizeof(myState));
   //test deck
   myState.deck[myPlayer][0] = estate;
   myState.deck[myPlayer][1] = duchy;

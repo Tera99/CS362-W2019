@@ -21,7 +21,7 @@ int main(){
   int myCard = 0;
   int myCard1 = 1;
   int myCard2 = 2;
-  int myCard3 = 3;
+  //int myCard3 = 3;
   struct gameState myState;
   myState.supplyCount[myCard] = 0;
   //report results of tests

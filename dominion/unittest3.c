@@ -139,7 +139,7 @@ int main(){
   memset(&myState, 0, sizeof(myState));
   //14 cards + gardens
   myState.handCount[myPlayer] = 15;
-  for (i = 0; i < 14; i++){
+  for (i = 0; i < 15; i++){
     myState.hand[myPlayer][i] = copper;
   }
   //myState.handCount[myPlayer] = 1;

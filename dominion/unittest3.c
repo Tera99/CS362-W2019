@@ -125,7 +125,7 @@ int main(){
     myState.hand[myPlayer][i] = curse;
   }
   //myState.handCount[myPlayer] = 1;
-  myState.hand[myPlayer][10] = gardens;
+  //myState.hand[myPlayer][10] = gardens;
   //print result
   int result6 = scoreFor(myPlayer, &myState);
   printf("Test 6 - gardens, expected: 1 - result: %d :", result6);
@@ -135,7 +135,7 @@ int main(){
     printf("FAILED\n");
   }
 
-  
+
 
 
 

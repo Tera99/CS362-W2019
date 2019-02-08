@@ -146,9 +146,9 @@ int main(){
   //myState.handCount[myPlayer] = 1;
   myState.hand[myPlayer][15] = gardens;
   //print result
-  int result6 = scoreFor(myPlayer, &myState);
-  printf("Test 6 - gardens, expected: 1 - result: %d :", result6);
-  if (result6 == 1){
+  int result7 = scoreFor(myPlayer, &myState);
+  printf("Test 7 - gardens, rounding, expected: 1 - result: %d :", result7);
+  if (result7 == 1){
     printf("PASSED\n");
   } else {
     printf("FAILED\n");

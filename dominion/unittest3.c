@@ -31,7 +31,7 @@ int main(){
 
   //test hand
   myState.hand[myPlayer][0] = estate;
-  myState.hand[myPlayer][1] = dutchy;
+  myState.hand[myPlayer][1] = duchy;
   myState.hand[myPlayer][2] = province;
   myState.hand[myPlayer][3] = great_hall;
   myState.hand[myPlayer][4] = curse;

@@ -29,9 +29,13 @@ int main(){
   int result = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result);
 
-  //test hand, discard, deck
-  myState.hand[myPlayer][0] = province;
-  myState.handCount[0] = 1;
+  //test hand
+  myState.hand[myPlayer][0] = estate;
+  myState.hand[myPlayer][1] = dutchy;
+  myState.hand[myPlayer][2] = province;
+  myState.hand[myPlayer][3] = great_hall;
+  myState.hand[myPlayer][4] = curse;
+  myState.handCount[0] = 5;
   result = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result);
 

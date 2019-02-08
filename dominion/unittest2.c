@@ -69,6 +69,7 @@ int main(){
 
   //negative number of cards??
   myState.supplyCount[myCard]--;
+  result4 = supplyCount(myCard, &myState);
   if (result4 == -1){
     strcpy (report5, "PASSED");
   } else {
@@ -80,6 +81,7 @@ int main(){
   printf("Test 2 - add cards: %s\n", report2);
   printf("Test 3 - large number of cards: %s\n", report3);
   printf("Test 4 - subtract cards: %s\n", report4);
+  printf("Test 5 - negative number of cards: %s\n", report5);
 
   printf("~~~~~End testing supplyCount function~~~~~\n");
   printf("~~~~~End Unit Test 2~~~~~\n");

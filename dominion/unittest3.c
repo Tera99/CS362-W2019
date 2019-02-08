@@ -115,6 +115,29 @@ int main(){
     printf("FAILED\n");
   }
 
+  //test gardens
+  //reset state
+  memset(&myState, 0, sizeof(myState));
+  //10 cards
+  myState.deckCount[myPlayer] = 10;
+  int i;
+  for (i = 0; i < 10; i++){
+    myState.deck[myPlayer][i] = copper;
+  }
+  myState.handCount[myPlayer] = 1;
+  myState.hand[myPlayer][0] = gardens;
+  //print result
+  int result6 = scoreFor(myPlayer, &myState);
+  printf("Test 6 - gardens, expected: 1 - result: %d :", result6);
+  if (result6 == 1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+
+  //15 cards
+  //20 cards
 
 
   printf("~~~~~ End testing scoreFor function ~~~~~\n");

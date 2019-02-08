@@ -31,6 +31,7 @@ int main(){
 
   //test hand, discard, deck
   myState.hand[myPlayer][0] = province;
+  myState.handCount[0] = 1;
   result = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result);
 

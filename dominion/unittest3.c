@@ -28,9 +28,9 @@ int main(){
   //try calling scoreFor
   int result = scoreFor(myPlayer, &myState);
   if (result == 0){
-    printf("Test 1 - empty deck: PASSED");
+    printf("Test 1 - empty deck: PASSED\n");
   } else {
-    printf("Test 1 - empty deck: FAILED");
+    printf("Test 1 - empty deck: FAILED\n");
   }
   //test hand
   myState.hand[myPlayer][0] = estate;
@@ -40,7 +40,7 @@ int main(){
   myState.hand[myPlayer][4] = curse;
   myState.handCount[myPlayer] = 5;
   int result2 = scoreFor(myPlayer, &myState);
-  printf("Test 2 - hand, expected: 10 result: %d :", result2);
+  printf("Test 2 - hand, expected: 10 - result: %d :", result2);
   if (result2 == 10){
     printf("PASSED\n");
   } else {
@@ -57,7 +57,12 @@ int main(){
   myState.discard[myPlayer][4] = curse;
   myState.discardCount[myPlayer] = 5;
   int result3 = scoreFor(myPlayer, &myState);
-  printf("Test result: %d\n", result3);
+  printf("Test 3 - discard, expected: 10 - result: %d :", result3);
+  if (result3 == 10){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //clear game state
   memset(&myState, 0, sizeof(myState));
@@ -70,6 +75,12 @@ int main(){
   myState.deckCount[myPlayer] = 5;
   int result4 = scoreFor(myPlayer, &myState);
   printf("Test result: %d\n", result4);
+  printf("Test 4 - deck, expected: 10 - result: %d :", result4);
+  if (result4 == 10){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   printf("~~~~~ End testing scoreFor function ~~~~~\n");
   printf("~~~~~End Unit Test 3~~~~~\n");

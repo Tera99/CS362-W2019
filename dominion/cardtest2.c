@@ -63,7 +63,7 @@ int main(){
   //check discard pile, should increase by one
   int result2a = myState.discardCount[currentPlayer];
   int result3a = myState2.discardCount[currentPlayer];
-  printf("result2a %d, result3a %d\n", result2, result3);
+  printf("result2a %d, result3a %d\n", result2a, result3a);
 
   //check deck, should decrease by 3
   int result2b = myState.deckCount[currentPlayer];

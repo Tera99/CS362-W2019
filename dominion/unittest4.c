@@ -69,7 +69,7 @@ int main(){
   }
   updateCoins(myPlayer, &myState, myBonus);
   int result4 = myState.coins;
-  printf("Test 4 - coppers: ");
+  printf("Test 4 - silver: ");
   if (result4 == 20){
     printf("PASSED\n");
   } else {

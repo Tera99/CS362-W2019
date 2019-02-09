@@ -76,6 +76,16 @@ int main(){
   //See bug report. This needs to be tested but is nothandled by code at all
   //update this test after refactoring
 
+  //check that deck has decreased
+  int result4 = myState.deckCount[currentPlayer];
+  int result5 = myState2.deckCount[currentPlayer];
+  printf("Test 4 - deck decreased")
+  if ((result5 - result4) >= 2){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
 
   printf("~~~~~End testing adventurer~~~~~\n");

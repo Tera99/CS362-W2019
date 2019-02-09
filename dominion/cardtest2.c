@@ -62,6 +62,13 @@ int main(){
   printf("result2 %d, result3 %d\n", result2, result3);
 
   //check that other player's hand not affected
+  int nextPlayer = currentPlayer++;
+  if (nextPlayer > MAX_PLAYERS){
+    nextPlayer = 0;
+  }
+  int result4 = myState.handCount[nextPlayer];
+  int result5 = myState2.handCount[nextPlayer];
+  printf("result4: %d, result5 %d\n", result4, result5);
 
   printf("~~~~~End testing smithyEffect function~~~~~\n");
   printf("~~~~~End Card Test 2~~~~~\n");

@@ -79,7 +79,7 @@ int main(){
   //check that deck has decreased
   int result4 = myState.deckCount[currentPlayer];
   int result5 = myState2.deckCount[currentPlayer];
-  printf("Test 4 - deck decreased")
+  printf("Test 4 - deck decreased");
   if ((result5 - result4) >= 2){
     printf("PASSED\n");
   } else {

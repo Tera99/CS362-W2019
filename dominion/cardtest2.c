@@ -60,6 +60,16 @@ int main(){
   int result3 = myState2.handCount[currentPlayer];
   printf("result2 %d, result3 %d\n", result2, result3);
 
+  //check discard pile, should increase by one
+  int result2a = myState.discardCount[currentPlayer];
+  int result3a = myState2.discardCount[currentPlayer];
+  printf("result2a %d, result3a %d\n", result2, result3);
+
+  //check deck, should decrease by 3
+  int result2b = myState.deckCount[currentPlayer];
+  int result3b = myState2.deckCount[currentPlayer];
+  printf("result2b %d, result3b %d\n", result2b, result3b);
+
   //check that other player's hand not affected
   int nextPlayer = currentPlayer + 1;
   if (nextPlayer > numPlayers-1){

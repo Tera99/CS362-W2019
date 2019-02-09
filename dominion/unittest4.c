@@ -55,12 +55,30 @@ int main(){
   printf("Test 3 - coppers: %d\n", result3);
 
   //test silver
+  memset(&myState, 0, sizeof(myState));
+  myState.handCount[myPlayer] = 10;
+  //fill the player hand with silver
+  for (i = 0; i < 10; i++){
+    myState.hand[myPlayer][i] = silver;
+  }
+  updateCoins(myPlayer, &myState, myBonus);
+  int result4 = myState.coins;
+  printf("Test 4 - silver: %d\n", result4);
 
   //test gold
-
-  //test bonus
+  memset(&myState, 0, sizeof(myState));
+  myState.handCount[myPlayer] = 10;
+  //fill the player hand with gold
+  for (i = 0; i < 10; i++){
+    myState.hand[myPlayer][i] = gold;
+  }
+  updateCoins(myPlayer, &myState, myBonus);
+  int result5 = myState.coins;
+  printf("Test 5 - gold: %d\n", result5);
 
   //test copper + silver + gold + bonus
+
+  //test bonus
 
   printf("~~~~~End testing updateCoins function~~~~~\n");
   printf("~~~~~End Unit Test 4~~~~~\n");

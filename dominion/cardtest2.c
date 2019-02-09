@@ -18,7 +18,7 @@ http://man7.org/linux/man-pages/man3/memcpy.3.html
 #include "rngs.h"
 int main(){
   printf("~~~~~Begining Card Test 2~~~~~\n");
-  printf("~~~~~Testing cardEffect(smtihy) function~~~~~\n");
+  printf("~~~~~Testing cardEffect(smithy) function~~~~~\n");
   //initialize a blank game state
   int result;
   int myHandPos = 0;

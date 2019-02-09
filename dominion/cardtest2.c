@@ -51,7 +51,7 @@ int main(){
   */
 
   //call cardEffect - smithy
-  int result = cardEffect(smithy, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
+  result = cardEffect(smithy, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
   printf("Test result: %d\n", result);
 
   //test that player hand has correct number of cards in hand

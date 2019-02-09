@@ -52,23 +52,47 @@ int main(){
 
   //call cardEffect - smithy
   result = cardEffect(smithy, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
-  printf("Test result: %d\n", result);
+  printf("Test 1 - call cardEffect(smithy): ");
+  if (result == 0){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //test that player hand has correct number of cards in hand
   int currentPlayer = whoseTurn(&myState2);
   int result2 = myState.handCount[currentPlayer];
   int result3 = myState2.handCount[currentPlayer];
-  printf("result2 %d, result3 %d\n", result2, result3);
+  //printf("Test 2 - cards in hand: result2 %d, result3 %d\n", result2, result3);
+  printf("Test 2 - num cards in hand: ");
+  if ((result3 - result2) == 2){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //check discard pile, should increase by one
   int result2a = myState.discardCount[currentPlayer];
   int result3a = myState2.discardCount[currentPlayer];
-  printf("result2a %d, result3a %d\n", result2a, result3a);
+  //printf("Test 3 - discard pile: result2a %d, result3a %d\n", result2a, result3a);
+  printf("Test 3 - num cards in discard pile: ");
+  if ((result3a - result2a) == 1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //check deck, should decrease by 3
   int result2b = myState.deckCount[currentPlayer];
   int result3b = myState2.deckCount[currentPlayer];
-  printf("result2b %d, result3b %d\n", result2b, result3b);
+  //printf("Test 4 - check deck: result2b %d, result3b %d\n", result2b, result3b);
+  printf("Test 4 - num cards in deck: ");
+  if ((result3b - result2b) == 3){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //check that other player's hand not affected
   int nextPlayer = currentPlayer + 1;
@@ -79,7 +103,14 @@ int main(){
   printf("nextPlayer: %d\n", nextPlayer);
   int result4 = myState.handCount[nextPlayer];
   int result5 = myState2.handCount[nextPlayer];
-  printf("result4: %d, result5 %d\n", result4, result5);
+  //printf("result4: %d, result5 %d\n", result4, result5);
+  printf("Test 5 - other players hand unaffected: ");
+  if ((result5 - result4) == 0){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   printf("~~~~~End testing smithyEffect function~~~~~\n");
   printf("~~~~~End Card Test 2~~~~~\n");

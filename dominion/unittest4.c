@@ -94,6 +94,10 @@ int main(){
   printf("Test 6 - copper, silver, and gold: %d\n", result6);
 
   //test bonus
+  memset(&myState, 0, sizeof(myState));
+  updateCoins(myPlayer, &myState, 10);
+  int result7 = myState.coins;
+  printf("Test 7 - bonus: %d\n", result7);
 
   printf("~~~~~End testing updateCoins function~~~~~\n");
   printf("~~~~~End Unit Test 4~~~~~\n");

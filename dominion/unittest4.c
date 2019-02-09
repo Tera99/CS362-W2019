@@ -50,7 +50,8 @@ int main(){
   for (i = 0; i < 10; i++){
     myState.hand[myPlayer][i] = copper;
   }
-  int result3 = updateCoins(myPlayer, &myState, myBonus);
+  updateCoins(myPlayer, &myState, myBonus);
+  int result3 = myState.coins;
   printf("Test 3 - coppers: %d\n", result3);
 
   //test silver

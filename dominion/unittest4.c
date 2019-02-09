@@ -76,7 +76,22 @@ int main(){
   int result5 = myState.coins;
   printf("Test 5 - gold: %d\n", result5);
 
-  //test copper + silver + gold + bonus
+  //test copper + silver + gold
+  memset(&myState, 0, sizeof(myState));
+  myState.handCount[myPlayer] = 30;
+  //fill the player hand with coppers
+  for (i = 0; i < 10; i++){
+    myState.hand[myPlayer][i] = copper;
+  }
+  for (i = 10; i < 20; i++){
+    myState.hand[myPlayer][i] = silver;
+  }
+  for (i = 20; i < 30; i++){
+    myState.hand[myPlayer][i] = gold;
+  }
+  updateCoins(myPlayer, &myState, myBonus);
+  int result6 = myState.coins;
+  printf("Test 6 - copper, silver, and gold: %d\n", result6);
 
   //test bonus
 

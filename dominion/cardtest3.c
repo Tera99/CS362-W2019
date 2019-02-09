@@ -58,6 +58,42 @@ int main(){
     printf("FAILED\n");
   }
 
+  //test drawing a card
+  //hand - difference should be zero, 1 card drawn & 1 card discarded
+  int currentPlayer = whoseTurn(&myState2);
+  int result2 = myState.handCount[currentPlayer];
+  int result3 = myState2.handCount[currentPlayer];
+  printf("Test 2 - num cards in hand: ");
+  if (result3 == result2){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //discard pile
+  int result4 = myState.discardCount[currentPlayer];
+  int result5 = myState2.discardCount[currentPlayer];
+  printf("Test 3 - num cards in discard pile: ");
+  if ((result5 - result4) == 1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //deck
+  int result6 = myState.deckCount[currentPlayer];
+  int result7 = myState2.deckCount[currentPlayer];
+  printf("Test 4 - num cards in deck: ");
+  if ((result7 - result6) == -1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //test other players hand
+
+  //test actions
+
   printf("~~~~~End testing villageEffect function~~~~~\n");
   printf("~~~~~End Card Test 3~~~~~\n");
   return 0;

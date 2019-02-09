@@ -52,7 +52,13 @@ int main(){
   }
   updateCoins(myPlayer, &myState, myBonus);
   int result3 = myState.coins;
-  printf("Test 3 - coppers: %d\n", result3);
+  printf("Test 3 - coppers: ");
+  if (result3 == 10){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //test silver
   memset(&myState, 0, sizeof(myState));
@@ -63,7 +69,13 @@ int main(){
   }
   updateCoins(myPlayer, &myState, myBonus);
   int result4 = myState.coins;
-  printf("Test 4 - silver: %d\n", result4);
+  printf("Test 4 - coppers: ");
+  if (result4 == 20){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //test gold
   memset(&myState, 0, sizeof(myState));
@@ -74,7 +86,13 @@ int main(){
   }
   updateCoins(myPlayer, &myState, myBonus);
   int result5 = myState.coins;
-  printf("Test 5 - gold: %d\n", result5);
+  printf("Test 5 - gold: ");
+  if (result5 == 30){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //test copper + silver + gold
   memset(&myState, 0, sizeof(myState));
@@ -91,13 +109,25 @@ int main(){
   }
   updateCoins(myPlayer, &myState, myBonus);
   int result6 = myState.coins;
-  printf("Test 6 - copper, silver, and gold: %d\n", result6);
+  printf("Test 6 - copper, silver, and gold: ");
+  if (result6 == 60){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //test bonus
   memset(&myState, 0, sizeof(myState));
   updateCoins(myPlayer, &myState, 10);
   int result7 = myState.coins;
-  printf("Test 7 - bonus: %d\n", result7);
+  printf("Test 7 - bonus: ");
+  if (result7 == 10){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   printf("~~~~~End testing updateCoins function~~~~~\n");
   printf("~~~~~End Unit Test 4~~~~~\n");

@@ -111,7 +111,7 @@ int main(){
   if ((result11 - result10) == 2){
     printf("PASSED\n");
   } else {
-    printf("FAILED\n");
+    printf("FAILED - wtf??\n");
   }
 
   printf("~~~~~End testing villageEffect function~~~~~\n");

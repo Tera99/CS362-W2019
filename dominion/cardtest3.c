@@ -17,7 +17,7 @@ Lecture material: https://oregonstate.instructure.com/courses/1706563/files/7315
 #include "rngs.h"
 int main(){
   printf("~~~~~Begining Card Test 3~~~~~\n");
-  printf("~~~~~Testing villageEffect function~~~~~\n");
+  printf("~~~~~Testing cardEffect(village) function~~~~~\n");
   //initialize a blank game state
   int result;
   int myHandPos = 0;
@@ -116,7 +116,7 @@ int main(){
     printf("FAILED\n");
   }
 
-  printf("~~~~~End testing villageEffect function~~~~~\n");
+  printf("~~~~~End testing village~~~~~\n");
   printf("~~~~~End Card Test 3~~~~~\n");
   return 0;
 }

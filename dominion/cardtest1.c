@@ -17,7 +17,7 @@ Lecture material: https://oregonstate.instructure.com/courses/1706563/files/7315
 #include "rngs.h"
 int main(){
   printf("~~~~~Begining Card Test 1~~~~~\n");
-  printf("~~~~~Testing adventurerEffect function~~~~~\n");
+  printf("~~~~~Testing cardEffect(adventurer) function~~~~~\n");
 
   //initialize a blank game state
   int result;
@@ -40,7 +40,7 @@ int main(){
   printf("Test result: %d\n", result);
 
 
-  printf("~~~~~End testing adventurerEffect function~~~~~\n");
+  printf("~~~~~End testing adventurer~~~~~\n");
   printf("~~~~~End Unit Test 1~~~~~\n");
   return 0;
 }

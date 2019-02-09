@@ -18,7 +18,7 @@ http://man7.org/linux/man-pages/man3/memcpy.3.html
 #include "rngs.h"
 int main(){
   printf("~~~~~Begining Card Test 2~~~~~\n");
-  printf("~~~~~Testing smithyEffect function~~~~~\n");
+  printf("~~~~~Testing cardEffect(smtihy) function~~~~~\n");
   //initialize a blank game state
   int result;
   int myHandPos = 0;
@@ -112,7 +112,7 @@ int main(){
   }
 
 
-  printf("~~~~~End testing smithyEffect function~~~~~\n");
+  printf("~~~~~End testing smithy~~~~~\n");
   printf("~~~~~End Card Test 2~~~~~\n");
   return 0;
 }

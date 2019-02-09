@@ -63,9 +63,10 @@ int main(){
 
   //check that other player's hand not affected
   int nextPlayer = currentPlayer++;
-  if (nextPlayer > MAX_PLAYERS){
+  if (nextPlayer > numPlayers-1){
     nextPlayer = 0;
   }
+  printf("nextPlayer: %d\n", nextPlayer);
   int result4 = myState.handCount[nextPlayer];
   int result5 = myState2.handCount[nextPlayer];
   printf("result4: %d, result5 %d\n", result4, result5);

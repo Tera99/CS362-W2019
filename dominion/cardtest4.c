@@ -85,12 +85,67 @@ int main(){
     printf("FAILED\n");
   }
 
-  //test other player 
+  //test other player
+  int nextPlayer = currentPlayer + 1;
+  if (nextPlayer > numPlayers-1){
+    nextPlayer = 0;
+  }
+  //hand
+  int result8 = myState.handCount[nextPlayer];
+  int result9 = myState2.handCount[nextPlayer];
+  printf("Test 5 - opponent hand: ");
+  if (result8 == result9){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //discard
+  int result10 = myState.discardCount[nextPlayer];
+  int result11 = myState2.discardCount[nextPlayer];
+  printf("Test 6 - opponent discard: ");
+  if ((result11 - result10) == 1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //deck
+  int result12 = myState.deckCount[nextPlayer];
+  int result13 = myState2.deckCount[nextPlayer];
+  printf("Test 7 - opponent deck: ");
+  if (result12 == result13){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //scores
+  //current player should be the same
+  int result14 = scoreFor(currentPlayer, &myState);
+  int result15 = scoreFor(currentPlayer, &myState2);
+  printf("Test 8 - curent player score: ")
+  if (result14 == result15){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //opponent should have -1
+  int result16 = scoreFor(nextPlayer, &myState);
+  int result17 = scoreFor(nextPlayer, &myState2);
+  printf("Test 9 - opponent score: ")
+  if ((result17 - result16) == -1){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
 
 
 
-  printf("~~~~~End testing sea_hagEffect function~~~~~\n");
+
+  printf("~~~~~End testing sea_hag~~~~~\n");
   printf("~~~~~End Card Test 4~~~~~\n");
   return 0;
 }

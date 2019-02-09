@@ -86,6 +86,16 @@ int main(){
     printf("FAILED\n");
   }
 
+  //check that discard has increased (or stayed same)
+  int result6 = myState.discardCount[currentPlayer];
+  int result7 = myState2.discardCount[currentPlayer];
+  printf("Test 5 - discard : ");
+  if ((result7 - result6) >= 0){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
 
   printf("~~~~~End testing adventurer~~~~~\n");

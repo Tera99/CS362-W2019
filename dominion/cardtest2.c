@@ -8,6 +8,7 @@ cardtest2.c
 testing smithyEffect function
 REFERENCES
 Lecture material: https://oregonstate.instructure.com/courses/1706563/files/73152166?module_item_id=18416505
+http://man7.org/linux/man-pages/man3/memcpy.3.html
 **************************************/
 #include "dominion.h"
 #include "dominion_helpers.h"
@@ -21,9 +22,15 @@ int main(){
   //initialize a blank game state
   int result;
   int myHandPos = 0;
+  int choice1 = 0;
+  int choice2 = 0;
+  int choice3 = 0;
+  int bonus = 0;
   struct gameState myState;
+  struct gameState myState2;
   //clear the struct with memset
   memset(&myState, 0, sizeof(myState));
+  memset(&myState2, 0, sizeof(myState));
 
   //need a valid game in progress to call adventurerEffect
   //or else it segfaults
@@ -34,10 +41,22 @@ int main(){
 
   // initialize a game state and player cards
   initializeGame(numPlayers, k, seed, &myState);
+  //copy game state for testing
+  memcpy(&myState2, &myState, sizeof(struct gameState));
 
   //call smithyEffect, should return zero
+  /*
   result = smithyEffect(&myState, myHandPos);
   printf("Test result: %d\n", result);
+  */
+
+  //call cardEffect - smithy
+  int result = cardEffect(smithy, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
+  printf("Test result: %d\n", result);
+
+  //test that player hand has correct number of cards in hand
+
+  //check that other player's hand not affected
 
   printf("~~~~~End testing smithyEffect function~~~~~\n");
   printf("~~~~~End Card Test 2~~~~~\n");

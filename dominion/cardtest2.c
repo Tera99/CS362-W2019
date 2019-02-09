@@ -88,7 +88,7 @@ int main(){
   int result3b = myState2.deckCount[currentPlayer];
   //printf("Test 4 - check deck: result2b %d, result3b %d\n", result2b, result3b);
   printf("Test 4 - num cards in deck: ");
-  if ((result3b - result2b) == 3){
+  if ((result2b - result3b) == 3){
     printf("PASSED\n");
   } else {
     printf("FAILED\n");

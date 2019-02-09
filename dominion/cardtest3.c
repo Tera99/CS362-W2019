@@ -108,6 +108,7 @@ int main(){
   //test actions
   int result10 = myState.numActions;
   int result11 = myState2.numActions;
+  printf("result11: %d, result 10: %d\n", result11, result10);
   if ((result11 - result10) == 2){
     printf("PASSED\n");
   } else {

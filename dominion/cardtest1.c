@@ -52,12 +52,30 @@ int main(){
 
   //call cardEffect - adventurer
   result = cardEffect(adventurer, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
-  printf("Test 1 - call cardEffect(village): ");
+  printf("Test 1 - call cardEffect(adventurer): ");
   if (result == 0){
     printf("PASSED\n");
   } else {
     printf("FAILED\n");
   }
+
+  //check that hand has increase by 2 card
+  int currentPlayer = whoseTurn(&myState2);
+  int result2 = myState.handCount[currentPlayer];
+  int result3 = myState2.handCount[currentPlayer];
+  printf("Test 2 - gained 2 treasure to hand: ");
+  if ((result3 - result2) == 2){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
+  //check that coinage has increased by at least 2
+  printf("Test 3 - treasure to correct coinage: ");
+  printf("FAILED\n");
+  //See bug report. This needs to be tested but is nothandled by code at all
+  //update this test after refactoring
+
 
 
   printf("~~~~~End testing adventurer~~~~~\n");

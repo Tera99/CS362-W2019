@@ -51,7 +51,7 @@ int main(){
 
   //call cardEffect - village
   result = cardEffect(village, choice1, choice2, choice3, &myState2, myHandPos, &bonus);
-  printf("Test 1 - call cardEffect(village,...): ");
+  printf("Test 1 - call cardEffect(village): ");
   if (result == 0){
     printf("PASSED\n");
   } else {
@@ -91,8 +91,28 @@ int main(){
   }
 
   //test other players hand
+  int nextPlayer = currentPlayer + 1;
+  if (nextPlayer > numPlayers-1){
+    nextPlayer = 0;
+  }
+  int result8 = myState.handCount[nextPlayer];
+  int result9 = myState2.handCount[nextPlayer];
+  //printf("result4: %d, result5 %d\n", result4, result5);
+  printf("Test 5 - other players hand unaffected: ");
+  if (result8 == result9){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //test actions
+  int result10 = myState.numActions;
+  int result11 = myState2.numActions;
+  if ((result11 - result10) == 2){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   printf("~~~~~End testing villageEffect function~~~~~\n");
   printf("~~~~~End Card Test 3~~~~~\n");

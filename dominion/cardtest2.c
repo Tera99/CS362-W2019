@@ -99,8 +99,8 @@ int main(){
   if (nextPlayer > numPlayers-1){
     nextPlayer = 0;
   }
-  printf("currentPlayer: %d\n", currentPlayer);
-  printf("nextPlayer: %d\n", nextPlayer);
+  //printf("currentPlayer: %d\n", currentPlayer);
+  //printf("nextPlayer: %d\n", nextPlayer);
   int result4 = myState.handCount[nextPlayer];
   int result5 = myState2.handCount[nextPlayer];
   //printf("result4: %d, result5 %d\n", result4, result5);

@@ -42,8 +42,16 @@ int main(){
     printf("FAILED\n");
   }
 
-
   //test copper
+  memset(&myState, 0, sizeof(myState));
+  myState.handcount[myPlayer] = 10;
+  int i;
+  //fill the player hand with coppers
+  for (i = 0; i < 10, i++){
+    myState.hand[myPlayer][i] = copper;
+  }
+  int result3 = updateCoins(myPlayer, &myState, myBonus);
+  printf("Test 3 - coppers: %d\n", result3);
 
   //test silver
 

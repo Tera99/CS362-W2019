@@ -25,12 +25,23 @@ int main(){
 
   //try calling the function, should return 0
   int result = updateCoins(myPlayer, &myState, myBonus);
-  printf("Test results: %d\n", result);
+  printf("Test 1 - empty game: ");
+  if (result == 0){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
 
   //coins in hand left over from previous turn
   myState.coins = 10;
   int result2 = updateCoins(myPlayer, &myState, myBonus);
-  printf("Test results: %d\n", result2);
+  printf("Test 2 - leftover coins: ");
+  if (result2 == 0){
+    printf("PASSED\n");
+  } else {
+    printf("FAILED\n");
+  }
+
 
   //test copper
 

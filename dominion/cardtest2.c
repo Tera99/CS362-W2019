@@ -56,8 +56,9 @@ int main(){
 
   //test that player hand has correct number of cards in hand
   int result2, result3;
-  result2 = myState.handCount[0];
-  result3 = myState2.handCount[0];
+  int currentPlayer = whoseTurn(&myState);
+  result2 = myState.handCount[currentPlayer];
+  result3 = myState2.handCount[currentPlayer];
   printf("result2 %d, result3 %d\n", result2, result3);
 
   //check that other player's hand not affected
